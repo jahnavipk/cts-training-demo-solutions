@@ -1,0 +1,20 @@
+Consul Command Prompt:
+
+consul agent -dev
+-----------------------------------------------------------------------------------------------------------
+
+RabbitMQ Command Prompt:
+
+cd C:\Program Files\RabbitMQ Server\rabbitmq_server-3.9.16\sbin
+
+rabbitmq-plugins.bat enable rabbitmq_management
+
+-----------------------------------------------------------------------------------------------------------
+
+Package Mangage Console Command to create DB Context:
+
+Scaffold-DbContext "Data Source=CTSDOTNET54;Database=ECommerceDB;User ID=sa;Password=pass@word1" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+Scaffold-DbContext "Data Source=CTSDOTNET54;Database=FlightBookingDB;User ID=sa;Password=pass@word1" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+-----------------------------------------------------------------------------------------------------------

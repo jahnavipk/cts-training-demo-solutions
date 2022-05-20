@@ -1,0 +1,16 @@
+cd C:\kafka-bin\bin\windows
+
+Zookeeper start:
+.\zookeeper-server-start.bat C:\kafka-bin\config\zookeeper.properties
+
+Kafka Server start:
+kafka-server-start.bat C:\kafka-bin\config\server.properties
+
+Create topic:
+kafka-topics --bootstrap-server 127.0.0.1:9092 --topic first_topic --create --partitions 3 --replication-factor 1
+
+Start Producer:
+kafka-console-producer.bat --broker-list localhost:9092 --topic first_topic-cf
+
+Start Consumer:
+kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic first_topic-cf --from-beginning

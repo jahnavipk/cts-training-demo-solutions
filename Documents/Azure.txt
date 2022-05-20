@@ -1,0 +1,38 @@
+Azure Balance Check URL: https://accounts.builder.ai/users/sign_in
+Id: jahnavi.pkamatgi@mml.local
+Password: AF1KKoCM
+
+Azure Login: https://portal.azure.com
+Azure Id: bc_wallet_220502_kcs6oeuqxu@BuilderCloudProvisioning.onmicrosoft.com
+Azure Password: YMpAyB52!
+
+
+New VM credentials:
+
+User Id: test-vm-user
+Password: test@1qaz!QAZ
+
+SQL Creds:
+
+Server admin login: sql-test
+Password: sample@1qaz!QAZ
+
+
+
+
+Connection String:
+
+Server=tcp:cogdotnet04-azure.database.windows.net,1433;Initial Catalog=sampleDB;Persist Security Info=False;User ID=sql-test;Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
+
+
+EFCore migration command:
+
+Scaffold-DbContext "Data Source=cogdotnet04-azure.database.windows.net;Database=sampleDB;User ID=sql-test;Password=sample@1qaz!QAZ" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+
+
+
+DemoAzureApi20220518095106
+
+
+https://demoazureapi20220518095106.azurewebsites.net/api/sample

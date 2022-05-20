@@ -1,0 +1,10 @@
+D:\DotNetApplications\AspDotNetMicroServices\Common\bin\Debug\netcoreapp3.1\Common.deps.json
+D:\DotNetApplications\AspDotNetMicroServices\Common\bin\Debug\netcoreapp3.1\Common.dll
+D:\DotNetApplications\AspDotNetMicroServices\Common\bin\Debug\netcoreapp3.1\Common.pdb
+D:\DotNetApplications\AspDotNetMicroServices\Common\obj\Debug\netcoreapp3.1\Common.csproj.AssemblyReference.cache
+D:\DotNetApplications\AspDotNetMicroServices\Common\obj\Debug\netcoreapp3.1\Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\DotNetApplications\AspDotNetMicroServices\Common\obj\Debug\netcoreapp3.1\Common.AssemblyInfoInputs.cache
+D:\DotNetApplications\AspDotNetMicroServices\Common\obj\Debug\netcoreapp3.1\Common.AssemblyInfo.cs
+D:\DotNetApplications\AspDotNetMicroServices\Common\obj\Debug\netcoreapp3.1\Common.csproj.CoreCompileInputs.cache
+D:\DotNetApplications\AspDotNetMicroServices\Common\obj\Debug\netcoreapp3.1\Common.dll
+D:\DotNetApplications\AspDotNetMicroServices\Common\obj\Debug\netcoreapp3.1\Common.pdb

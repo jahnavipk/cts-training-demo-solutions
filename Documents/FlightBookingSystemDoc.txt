@@ -1,0 +1,217 @@
+AirlineService:
+
+URL: http://localhost:37009/api/flight/airline/register
+
+Sample Input:
+{
+    "UserName":"Ankit",
+    "Password":"password",
+    "EmailId":"ankit@gamil.com",
+    "ContactNo":"9000890008",
+    "Gender":"M",
+    "Age":30,
+    "RoleId":2
+}
+
+Sample Output:
+
+User registered successfully!
+
+
+URL: http://localhost:37009/api/flight/airline/inventory/add
+
+Sample Input:
+{
+    "FlightNo": "SG 9876",
+    "FlightName":"Spicejet",
+    "FromLocation":"Hyderabad",
+    "ToLocation":"Bangalore",
+    "DepartureDateTime":"2022-07-09T07:00",
+    "ArrivalDateTime":"2022-07-08T09:00",
+    "Price":1600,
+    "NoOfSeats":15,
+    "MealOption":"Y",
+    "Remarks":""
+}
+
+Sample Output:
+
+Flight details added successfully
+
+------------------------------------------------------------------------------------------------------------
+
+SearchService:
+
+URL: http://localhost:37009/api/flight/search
+
+Sample Input:
+{
+    "FromLocation":"Bangalore",
+    "ToLocation":"Hyderabad",
+    "NoOfPassengers":1
+}
+
+Sample Output:
+[
+    {
+        "flightNo": "6E 1234",
+        "flightName": "Indigo",
+        "fromLocation": "Bangalore",
+        "toLocation": "Hyderabad",
+        "departureDateTime": "2022-05-29T01:00:00",
+        "arrivalDateTime": "2022-05-29T14:30:00",
+        "price": 1500,
+        "noOfSeats": 10,
+        "mealOption": "Y",
+        "isActive": "Y",
+        "remarks": null,
+        "createdBy": "Admin",
+        "createdDate": "2022-04-30T00:00:00",
+        "modifiedBy": "Admin",
+        "modifiedDate": "2022-04-30T00:00:00"
+    },
+    {
+        "flightNo": "SG 1234",
+        "flightName": "Spicejet",
+        "fromLocation": "Bangalore",
+        "toLocation": "Hyderabad",
+        "departureDateTime": "2022-05-29T16:00:00",
+        "arrivalDateTime": "2022-05-29T18:30:00",
+        "price": 2000,
+        "noOfBusinessSeats": 15,
+        "noOfNonBusinessSeats": 25,
+        "mealOption": "Y",
+        "isActive": "Y",
+        "remarks": null,
+        "createdBy": "Admin",
+        "createdDate": "2022-04-30T00:00:00",
+        "modifiedBy": "Admin",
+        "modifiedDate": "2022-04-30T00:00:00"
+    }
+]
+
+------------------------------------------------------------------------------------------------------------
+
+BookingService:
+
+URL: http://localhost:37009/api/flight/booking
+
+Sample Input:
+{
+	"UserId": 1,
+	"FlightNo": "6E 1234",
+	"NoOfPassengers": 2,
+	"DepartureDateTime": "2022-05-29T01:00:00",
+	"IsOneWay": "Y",
+	"ReturnDateTime": "",
+	"TblPassengerDetails": [{
+		"PassengerName": "John",
+		"PassengerAge": 30,
+		"PassengerGender": "M",
+		"IsMealOpted": "N",
+		"Price": 1500
+	}, {
+		"PassengerName": "Jane",
+		"PassengerAge": 30,
+		"PassengerGender": "F",
+		"IsMealOpted": "N",
+		"Price": 1500
+	}]
+}
+
+Sample Ouput:
+Flight Booked Successfully with PNR No: 200001
+
+
+
+URL: http://localhost:37009/api/flight/booking/history/ankit@gmail.com
+
+Sample Output:
+{
+    "emailId": "ankit@gmail.com",
+    "result": [
+        {
+            "pnr": 200001,
+            "userName": "Ankit",
+            "flightNo": "6E1234",
+            "passengerName": "John",
+            "passengerAge": 30,
+            "passengerGender": "M",
+            "isMealOpted": "N",
+            "mealType": null,
+            "departureDateTime": "2022-05-03T00:00:00",
+            "isOneWay": "Y",
+            "returnDateTime": "2022-05-03T00:00:00",
+            "noOfPassengers": 1,
+            "price": 1500,
+            "statusCode": 1
+        },
+        {
+            "pnr": 200001,
+            "userName": "Ankit",
+            "flightNo": "6E1234",
+            "passengerName": "Jane",
+            "passengerAge": 30,
+            "passengerGender": "F",
+            "isMealOpted": "N",
+            "mealType": null,
+            "departureDateTime": "2022-05-03T00:00:00",
+            "isOneWay": "Y",
+            "returnDateTime": "2022-05-03T00:00:00",
+            "noOfPassengers": 1,
+            "price": 1500,
+            "statusCode": 1
+        }
+    ]
+}
+
+
+URL: http://localhost:37009/api/flight/booking/ticket/200001
+
+Sample Output:
+[
+    {
+        "pnr": 200001,
+        "userName": "Ankit",
+        "flightNo": "6E1234",
+        "passengerName": "John",
+        "passengerAge": 30,
+        "passengerGender": "M",
+        "isMealOpted": "N",
+        "mealType": null,
+        "departureDateTime": "2022-05-03T00:00:00",
+        "isOneWay": "Y",
+        "returnDateTime": "2022-05-03T00:00:00",
+        "noOfPassengers": 1,
+        "price": 1500,
+        "statusCode": 1
+    },
+    {
+        "pnr": 200001,
+        "userName": "Ankit",
+        "flightNo": "6E1234",
+        "passengerName": "Jane",
+        "passengerAge": 30,
+        "passengerGender": "F",
+        "isMealOpted": "N",
+        "mealType": null,
+        "departureDateTime": "2022-05-03T00:00:00",
+        "isOneWay": "Y",
+        "returnDateTime": "2022-05-03T00:00:00",
+        "noOfPassengers": 1,
+        "price": 1500,
+        "statusCode": 1
+    }
+]
+
+------------------------------------------------------------------------------------------------------------
+
+AdminService:
+
+http://localhost:37009/api/flight/admin/login
+
+Sample Input:
+{
+    "EmailId": "abc",
+    "Password":"abc"
+}
